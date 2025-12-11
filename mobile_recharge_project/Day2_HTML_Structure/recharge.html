@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>Mobile Recharge - Recharge</title></head>
+<body>
+<header>
+  <h1>Mobile Recharge App</h1>
+  <nav>
+    <a href="index.html">Login</a> |
+    <a href="signup.html">Signup</a> |
+    <a href="recharge.html">Recharge</a> |
+    <a href="dashboard.html">Dashboard</a>
+  </nav>
+</header>
+<main>
+  <h2>Enter Mobile Number</h2>
+  <form>
+    <label for="mobile">Mobile Number</label>
+    <input id="mobile" name="mobile" type="tel" pattern="[0-9]{10}" placeholder="9876543210" required>
+    <label for="operator">Operator</label>
+    <select id="operator" name="operator">
+      <option>Operator A</option>
+      <option>Operator B</option>
+    </select>
+    <button type="submit">Find Plans</button>
+  </form>
+</main>
+<footer>&copy; Mobile Recharge</footer>
+</body>
+</html>

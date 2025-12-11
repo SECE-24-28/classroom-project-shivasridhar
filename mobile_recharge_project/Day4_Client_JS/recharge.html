@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Recharge - JS</title></head>
+<body>
+<header><h1>Recharge (JS)</h1></header>
+<main>
+  <form id="rechargeForm">
+    <label>Mobile</label><input id="mobile" maxlength="10" required><br/>
+    <label>Operator</label><select id="operator"><option>Operator A</option><option>Operator B</option></select><br/>
+    <button type="submit">Find Plans</button>
+  </form>
+  <div id="message" role="status"></div>
+  <div id="plans"></div>
+</main>
+<script>
+document.getElementById('rechargeForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  const m = document.getElementById('mobile').value.trim();
+  const msg = document.getElementById('message');
+  if(!/^[0-9]{10}$/.test(m)){ msg.textContent = 'Enter a valid 10-digit mobile number.'; return; }
+  msg.textContent = 'Mobile valid. Fetching plans...';
+  // simulate dynamic UI update
+  const plansDiv = document.getElementById('plans');
+  plansDiv.innerHTML = '';
+  const card = document.createElement('div');
+  card.innerHTML = '<h3>Sample Plan ₹199 - 28 days - 1.5GB/day</h3><button id="select">Select</button>';
+  plansDiv.appendChild(card);
+  document.getElementById('select').addEventListener('click', function(){
+    alert('Plan selected: ₹199');
+  });
+});
+</script>
+</body></html>

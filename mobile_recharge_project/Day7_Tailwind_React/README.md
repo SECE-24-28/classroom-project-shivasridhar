@@ -1,0 +1,1 @@
+This folder includes example React components using Tailwind utility classes (assumes Tailwind setup in project).
